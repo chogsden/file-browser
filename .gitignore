@@ -1,3 +1,2 @@
 config/global.php
 config/database.yml
-vendor/elasticsearch/data
