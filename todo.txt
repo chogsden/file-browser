@@ -1,0 +1,7 @@
+*** development todo list ***
+
+- Create start-up documentation
+
+- Develop a database schema logging procedure (like that used in rails)
+
+- fix _system/mvc.php commandline structuer build

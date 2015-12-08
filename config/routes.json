@@ -1,0 +1,25 @@
+{
+  "_null":{
+    "request":""
+  },
+  "\/":{
+    "request":"home"
+  },
+  "home":{
+    "request":"home",
+    "navbar":{
+      "name":"Home",
+      "type":"link",
+      "group":""
+    }
+  },
+  "build_index":{
+    "request":"build_index"
+  },
+  "login":{
+    "request":"authentication"
+  },
+  "logout":{
+    "request":"authentication"
+  }
+}

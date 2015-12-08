@@ -1,0 +1,278 @@
+/* ==========================================================================
+   Insert Your Custom Styles Below. All styles located in this file will
+   override existing bootstrap stylesheets.
+   ========================================================================== */ 
+
+.body {
+}
+
+/*
+div {
+	border: 1px solid #000 !important;
+}
+*/
+
+/* ==========================================================================
+   Text Styles
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'arial', 'Open Sans', sans-serif;
+	margin: 0px;
+}
+
+h3 {
+	padding-top: 15px;
+}
+
+h4 {
+	letter-spacing: -1px;
+	color: #31363a;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+h5 {
+	padding-top: 2px;
+}
+
+h6 {
+	padding-top: 3px;
+}
+
+p {
+	line-height: 22px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #555;
+}
+
+p.intro {
+	padding-top: 10px;
+	font-size: 18px;
+	line-height: 17px;
+}
+
+p.body {
+	font-size: 20px;
+	padding-top: 15px;
+}
+
+.italicise {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.text-space {
+	padding-left: 170px;
+}
+
+.list-grid {
+	margin-top: 0px;
+}
+
+.superscript {
+	vertical-align: super;
+	font-size: 12px;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #ddd;
+}
+
+.padding-t-0 {
+    padding-top: 0px !important;
+}
+
+.padding-b-10 {
+    padding-bottom: 10px;
+}
+
+/* ==========================================================================
+   Colour styles
+   ========================================================================== */
+
+.black {
+	color: #31363a;
+}
+
+.dark-gray {
+	color: #626c72;
+}
+
+.gray {
+	color: #a5b2b9;
+}
+
+.light-gray {
+	color: #dfe5e8;
+}
+
+.white {
+	color: #FFFFFF;
+}
+.orange {
+	color: #567e5c;
+}
+.full-black {
+	line-height: 23px;
+	color: #000;
+	font-weight: 400;
+}
+.grey-bg {
+	background-color: #ddd !important;
+}
+.red {
+	color: #ff0000 !important;
+}
+
+/* ==========================================================================
+   Section Styles
+   ========================================================================== */
+
+#content1 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+#content2 {
+	margin-top: 80px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+}
+#content3 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+}
+#page-header{
+	margin-top: 70px;
+	text-align: left;
+}
+#pages {
+	padding-top: 20px;
+}
+#page-title {
+	margin-top: 80px;
+}
+.margin-0 {
+    margin: 0 !important;
+}
+.margin-b-10 {
+    margin-bottom: 10px !important;
+}
+
+/* ==========================================================================
+   Navigation styles
+   ========================================================================== */
+
+.navbar {
+	background-color: #142934;
+    border-color: transparent;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.navbar-nav > .disabled > a {
+	color: #eee !important;
+}
+
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus  {
+	background-color: #dfe5ff;
+	border-color: #142934;
+	color: #000;
+}
+
+.logout {
+	position: absolute;
+	top: 15px;
+	right: 75px;
+}
+
+/* ==========================================================================
+   Media Styles
+   ========================================================================== */
+
+.image-grid {
+	margin-top: 0px;
+}
+.grid-item {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.image {
+	width: 150px;
+	height: 230px;
+}
+.no-image {
+	display: block;
+	width: 150px;
+	height: 150px;
+	background-color: #dfe5e8;
+}
+
+/* ==========================================================================
+   Media Upload Styles
+   ========================================================================== */
+
+tr.sub-heading {
+	border-bottom: 2px solid #ccc; 
+}
+th {
+	border-right: 1px solid #aaa;
+	text-align: center;
+}
+td {
+	border-right: 1px solid #aaa;
+}
+.col-subheading {
+	padding-left: 25px  !important;
+	padding-right: 25px !important;
+}
+.notes-field, .source-field {
+	min-width: 200px;
+}
+.id-field {
+	min-width: 100px;
+}
+.force-width {
+	padding-left: 60px !important;
+	padding-right: 60px !important;
+}
+
+
+/* ==========================================================================
+   List Styles
+   ========================================================================== */
+
+.list-row {
+	width: 80%;
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+.list-item {
+	padding: 5px;
+	display: block;
+	border: 1px solid #dde3e6;
+	text-align: left;
+}
+.list-item:hover {
+	background-color: #dfe5e8;
+}
+.list-item a {
+	text-decoration: none;
+}
+
+.btn-collect {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	text-align: right;
+}

@@ -1,0 +1,12 @@
+# Database configuration #
+
+# Elasticsearch config
+elasticsearch:
+    server: http://localhost:9210/
+
+# MySQL config
+mysql:
+    server: localhost
+    user: 
+    pass: 
+    db: file_browser
