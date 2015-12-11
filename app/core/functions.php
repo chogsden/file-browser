@@ -38,7 +38,12 @@
 			$config['domain_url'] = trim(preg_replace('@domain=@', '', $_SERVER['argv'][1]), '/').'/';
 			$GLOBALS['controller'] = preg_replace('@controller=@', '', $_SERVER['argv'][2]);
 			$request = trim(preg_replace('@request=@', '', $_SERVER['argv'][3]), '/');
-			$_SERVER["REQUEST_URI"] = trim('commandline::/'.$config['root_dir'].$request, '/');
+			if(isset($_SERVER['argv'][4])) {
+				$format = trim(preg_replace('@format=@', '', $_SERVER['argv'][4]), '/');
+			} else {
+				$format = '';
+			}
+			$_SERVER["REQUEST_URI"] = trim('commandline::/'.$config['root_dir'].$request, '/').'/'.$format;
 			$GLOBALS['view_path'] = '';
 			$GLOBALS['debug'] = true;
 		}
@@ -334,11 +339,13 @@
 				break;
 
 		}
+		$report = chr(10).'Loading '.$type.' '.$source.chr(10);
 
 		// Output loaded module to screen:
 		if($GLOBALS['debug'] == true) {
-			echo(chr(10).'Loading '.$type.' '.$source.chr(10));
+			echo($report);
 		}
+		createLog($report);
 		return 'app/'.$type.'s/'.$source.'.php';
 	}
 
@@ -347,17 +354,17 @@
 		'CONTENT============================================================================================='.
 		chr(10))
 		;
-		$message[2] = (chr(10).
+		$message[3] = (chr(10).
 		'===================================================================================================='.
 		chr(10))
 		;
 		if($GLOBALS['debug'] == true) {
 			echo($message[1]);
 			print_r($content);
-			echo($message[2]);
+			echo($message[3]);
 		}
 
-		$message[3] = preg_replace('@"|\\\@', '', prettyJson(json_encode($content)));
+		$message[2] = preg_replace('@"|\\\@', '', prettyJson(json_encode($content)));
 		ksort($message);
 		createLog(implode('', $message));
 	}
@@ -426,7 +433,7 @@
 		if($config['development_log'] == true) {
 			exec('echo "'.$message.'" >> '.$config['dev_log_path'].' 2>&1', $cl_output);
 			if(!empty($cl_output)) {
-//				print_r($cl_output);
+				print_r($cl_output);
 			}
 		}
 	}

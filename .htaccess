@@ -2,7 +2,7 @@ Options +FollowSymLinks
 RewriteEngine on
 
 ## MVC Section rules:
-RewriteRule ^login|logout|build_index|home|museum_1|museum_2|classes|workshops|exhibition|home|museum_1|museum_2|classes|workshops|exhibition index.php
+RewriteRule ^login|logout|build_index|comments|home|museum_1|museum_2|classes|workshops|exhibition index.php
 
 ## Core asset rules:
 RewriteRule ^upload(.*)$ app/assets/content/tmp/$1

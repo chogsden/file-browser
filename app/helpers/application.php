@@ -44,6 +44,6 @@
 */
 
 	// Clear development log:
-//	deleteLog($config);
+	deleteLog($config);
 
 ?>

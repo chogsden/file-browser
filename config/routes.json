@@ -13,6 +13,9 @@
       "group":""
     }
   },
+  "comments":{
+    "request":"comments"
+  },
   "build_index":{
     "request":"build_index"
   },

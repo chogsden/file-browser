@@ -23,33 +23,41 @@
 	require(loadMVC('controller', $request_parameters['route_request']));
 
 	// Output route:
-	if($request_parameters['output_format'] == 'html') {
+	switch($request_parameters['output_format']) {
 
-		// Send the content to the view:
-		require(loadMVC('view', $view_path));
+		case 'html':
+			// Send the content to the view:
+			require(loadMVC('view', $view_path));
 
-		$app_title = $request_parameters['route_view'];
+			$app_title = $request_parameters['route_view'];
 
-		// Set up navbar:
-		require(loadMVC('helper', 'navbar'));
+			// Set up navbar:
+			require(loadMVC('helper', 'navbar'));
 
-		// Get navbar display:
-		require(loadMVC('view', 'shared/navbar'));
+			// Get navbar display:
+			require(loadMVC('view', 'shared/navbar'));
 
-		// ADD common views in app/views/shared:
-			// Get page title:
-			// require(loadMVC('view', 'shared/title'));
+			// ADD common views in app/views/shared:
+				// Get page title:
+				// require(loadMVC('view', 'shared/title'));
 
-			// Get page footer:
-			// require(loadMVC('view', 'shared/footer'));
+				// Get page footer:
+				// require(loadMVC('view', 'shared/footer'));
 
-		// If html is expected, send display content to application view:
-		require(loadMVC('view', 'application'));
+			// If html is expected, send display content to application view:
+			require(loadMVC('view', 'application'));
 
-	} else {
+			break;
 
-		// Otherwies send to alternative output controller:
-		require(loadMVC('helper', $request_parameters['output_format']));
+		case 'json':
+		case 'xml':
+			// Otherwies send to alternative output controller:
+			require(loadMVC('helper', $request_parameters['output_format']));
+
+			break;
+
+		default:
+			break;
 
 	}
 
